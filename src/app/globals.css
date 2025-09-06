@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #707070;
+  --color-primary: #95bf47;
+  --color-secondary: #F8F5ED;
+  --color-accent: #FFDA6E;
+  --color-muted: #F0F0F0;
+  --color-border: rgba(0, 0, 0, 0.1);
+
+  --text-base: 18px;
+  --text-link: 16px;
+  --text-header: 64px;
+  --text-title: 28px;
+  --text-hero: 96px;
+}
+
+:root {
+  color: var(--color-foreground);
+  background: var(--color-background);
+  font-size: var(--text-base);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-display: swap;
+}
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+/* Optimize animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
